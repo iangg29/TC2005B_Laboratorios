@@ -1,0 +1,18 @@
+{
+  "include": [
+    "src/assets/typescript/*"
+  ],
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "outDir": "dist/assets/js",
+    "sourceMap": true,
+    "target": "ES6",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "strict": true,
+    "types": [
+      "node", "express"
+    ]
+  },
+}
