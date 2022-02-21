@@ -1,6 +1,6 @@
 {
   "include": [
-    "src/assets/typescript/*"
+    "src/assets/typescript/*.ts"
   ],
   "compilerOptions": {
     "allowJs": true,
