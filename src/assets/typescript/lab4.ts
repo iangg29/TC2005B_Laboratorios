@@ -18,15 +18,10 @@ const drawTable = (id: string): void => {
         let numCell: HTMLTableCellElement | undefined = newRow?.insertCell();
         let squaredCell: HTMLTableCellElement | undefined = newRow?.insertCell();
         let cubedCell: HTMLTableCellElement | undefined = newRow?.insertCell();
-        numCell?.classList.add("px-6");
-        numCell?.classList.add("py-4");
-        numCell?.classList.add("whitespace-nowrap");
-        squaredCell?.classList.add("px-6");
-        squaredCell?.classList.add("py-4");
-        squaredCell?.classList.add("whitespace-nowrap");
-        cubedCell?.classList.add("px-6");
-        cubedCell?.classList.add("py-4");
-        cubedCell?.classList.add("whitespace-nowrap");
+        const styles: string[] = ["px-6", "py-4", "whitespace-nowrap"];
+        styles.map(style => numCell?.classList.add(style));
+        styles.map(style => squaredCell?.classList.add(style));
+        styles.map(style => cubedCell?.classList.add(style));
         let numTxt = document.createTextNode(i.toString());
         let squaredTxt = document.createTextNode((i * i).toString());
         let cubedTxt = document.createTextNode((i * i * i).toString());
@@ -53,7 +48,9 @@ const inverso = (num: number): number => {
     return -1;
 };
 
-drawTable("exercise1");
-quiz();
-contador([1, 2, 3]);
-promedios([generateArray(6), generateArray(10)]);
+document.querySelector("#startScriptBtn")?.addEventListener('click', (e: Event) => {
+    drawTable("exercise1");
+    quiz();
+    contador([1, 2, 3]);
+    promedios([generateArray(6), generateArray(10)]);
+});
