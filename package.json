@@ -4,7 +4,7 @@
   "description": "Exercises of Software Construction class TC2005B.",
   "main": "index.js",
   "scripts": {
-    "build": "npx tsc && npx tailwindcss -i src/assets/css/styles.css -o dist/assets/css/styles.css",
+    "build": "npx tsc && npx tailwindcss -i src/assets/css/styles.css -o dist/assets/css/styles.css --minify",
     "dev:watch": "npx tailwindcss -i src/assets/css/styles.css -o dist/assets/css/styles.css --watch",
     "start": "npm run build && node index.js",
     "dev": "npm run build && nodemon index.js & npm run dev:watch"
