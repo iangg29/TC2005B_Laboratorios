@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
+
 .card {
     @apply bg-slate-200 rounded-md shadow-sm w-full p-8 text-center font-semibold text-lg hover:shadow-lg hover:cursor-pointer;
 }
+
 @tailwind utilities;
