@@ -18,61 +18,114 @@
         </div>
     </header>
     <main class="mb-auto">
+        <!-- Laboratorio -->
+        <section class="pt-2">
+            <div class="container max-w-7xl mx-auto space-y-10">
+                <div class="flex flex-row space-x-5 justify-center">
+                    <div class="relative w-48 h-48">
+                        <img src="assets/img/ian.jpg" alt="Ian García" class="rounded-full shadow-xl" loading="lazy">
+                    </div>
+                    <div class="flex flex-col space-y-2 my-auto">
+                        <h2 class="font-extrabold text-3xl">Ian García González</h2>
+                        <span class="font-medium text-base">A01706892 | Ingeniero en Tecnologías Computacionales</span>
+                        <span class="font-medium text-base text-gray-800">Incoming FBU Intern at <img
+                                src="assets/img/meta.png" alt="Meta Inc." loading="lazy"
+                                class="inline-block h-12 -ml-2 -mt-1"/></span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <p class="text-sm text-gray-500">💻 Made with <a href="https://www.jetbrains.com/webstorm/"
+                                                                     target="_blank"
+                                                                     class="hover:text-gray-600 hover:underline">WebStorm</a>,
+                        <a href="http://tailwindcss.com" target="_blank" class="hover:text-gray-600 hover:underline">TailwindCSS</a>,
+                        <a href="https://www.typescriptlang.org" target="_blank"
+                           class="hover:text-gray-600 hover:underline">TypeScript</a>. 👨🏻‍💻</p>
+                </div>
+            </div>
+        </section>
         <!-- Preguntas -->
-        <section class="pt-6 pb-24 bg-white">
+        <section class="pt-6 pb-24 bg-white text-justify space-y-10">
             <div class="px-8 mx-auto max-w-7xl lg:px-16">
                 <h2 class="mb-4 text-xl font-bold md:text-3xl">Preguntas</h2>
                 <div class="grid grid-cols-1 gap-0 text-gray-600 md:grid-cols-2 md:gap-16">
                     <div>
                         <h5 class="mt-10 mb-3 font-semibold text-gray-900">¿Cuál es la diferencia entre Internet y la
                             World Wide Web?</h5>
-                        <p></p>
+                        <p>El internet es la red de computadoras que existen alrededor del mundo que se encuentran
+                            conectadas entre sí, mientras que la Word Wide Web es la colección de páginas web que están
+                            dentro de la red de computadoras.</p>
                         <h5 class="mt-10 mb-3 font-semibold text-gray-900">¿Cuáles son las partes de un URL?</h5>
-                        <p></p>
+                        <p>Dentro de un URL se encuentra el protocolo, subdominio, dominio, ruta y parámetros.</p>
                         <h5 class="mt-10 mb-3 font-semibold text-gray-900">¿Cuál es el propósito de los métodos HTTP:
                             GET, HEAD, POST, PUT, PATCH, DELETE?</h5>
-                        <p></p>
+                        <p><b>GET</b>: Solicitar datos de un recurso en específico. <b>HEAD</b>: Obtener los datos del
+                            header de algún <i>endpoint</i>. <b>POST</b>: Enviar datos para la creación de algún
+                            recurso. <b>PUT</b>: Actualizar algún recurso en particular. <b>PATCH</b>: Actualizar un
+                            recurso de forma parcial.<b>DELETE</b>: Elimina un recurso.</p>
                         <h5 class="mt-10 mb-3 font-semibold text-gray-900">¿Qué método HTTP se debe utilizar al enviar
                             un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por
                             qué?</h5>
-                        <p></p>
+                        <p>Se debe de utilizar un método <b>POST</b>, ya que los datos que se envían son sensibles y no
+                            deben de ser visibles (como en el método <b>GET</b>).</p>
                         <h5 class="mt-10 mb-3 font-semibold text-gray-900">¿Qué método HTTP se utiliza cuando a través
                             de un navegador web se accede a una página a través de un URL?</h5>
-                        <p></p>
+                        <p>Se utiliza un método <b>GET</b>, para poder solicitar al servidor el contenido de la página.
+                        </p>
                         <h5 class="mt-10 mb-3 font-semibold text-gray-900">Un servidor web devuelve una respuesta HTTP
                             con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</h5>
-                        <p></p>
+                        <p>Significa que la solicitud fué exitosa, sin error alguno.</p>
                         <h5 class="mt-10 mb-3 font-semibold text-gray-900">¿Es responsabilidad del desarrollador
                             corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con
                             un error 404? ¿Por qué?</h5>
-                        <p></p>
+                        <p>Dependiendo del contexto sí será responsabilidad del desarrollador atender el error 404,
+                            debido a que muchas veces los sitios web cuentan con vistas dinámicas. No obstante, si el
+                            usuario ingreso a una sección que no existe, no será responsabilidad del desarrollador
+                            atender este error.</p>
                     </div>
                     <div>
                         <h5 class="mt-10 mb-3 font-semibold text-gray-900">¿Es responsabilidad del desarrollador
                             corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con
                             un error 500? ¿Por qué?</h5>
-                        <p></p>
+                        <p>Sí, debido a que los errores 5xx significa que hubo algún error crítico del lado del
+                            servidor, por lo que el desarrollador debe solucionarlo.</p>
                         <h5 class="mt-10 mb-3 font-semibold text-gray-900">¿Qué significa que un atributo HTML5 esté
                             depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5
                             estén desaprobados.</h5>
-                        <p></p>
+                        <p>Que un elemento atributo del HTML está en desuso por lo que ha quedado obsoleto por nuevas
+                            construcciones. Por ejemplo: link, align, background, etc. </p>
                         <h5 class="mt-10 mb-3 font-semibold text-gray-900">¿Cuáles son las diferencias principales entre
                             HTML 4 y HTML5?</h5>
-                        <p></p>
+                        <p>En HTML4 todo está mezclado, existen menos funciones y etiquetas, mientras que en HTML5 la
+                            estructura esta dividida por la semántica de la página.</p>
                         <h5 class="mt-10 mb-3 font-semibold text-gray-900">¿Qué componentes de estructura y estilo tiene
                             una tabla?</h5>
-                        <p></p>
+                        <p>Una tabla se conforma de 3 diferentes secciones, el encabezado <b>thead</b>, el cuerpo <b>tbody</b>,
+                            así como el footer <b>tfoot</b>. Dentro de los cuales se encuentran los tags <b>tr</b> y <b>td</b>
+                            para definir filas y celdas.</p>
                         <h5 class="mt-10 mb-3 font-semibold text-gray-900">¿Cuáles son los principales controles de una
                             forma HTML5?</h5>
-                        <p></p>
+                        <p>Los elementos principales son form, label, input, select, option, button, radio, checkbox,
+                            etc.</p>
                         <h5 class="mt-10 mb-3 font-semibold text-gray-900">¿Qué tanto soporte HTML5 tiene el navegador
                             que utilizas? </h5>
-                        <p></p>
-                        <h5 class="mt-10 mb-3 font-semibold text-gray-900"><b>Sobre el ciclo de vida y desarrollo de los
-                            sistemas de información:</b>
-                            ¿Cuál es el ciclo de vida de los sistemas de información?
-                            ¿Cuál es el ciclo de desarrollo de sistemas de información?</h5>
-                        <p></p>
+                        <p>Utilizando Safari 15.3 en MacOS Monterey 12.2.1: 469/555 pts.<br>Utilizando Chrome 98 en
+                            MacOS Monterey 12.2.1: 479/555 pts.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="px-8 mx-auto max-w-7xl lg:px-16">
+                <h2 class="mb-4 text-xl font-bold md:text-3xl">Sobre el ciclo de vida y desarrollo de los
+                    sistemas de información:</h2>
+                <div class="grid grid-cols-1 gap-0 text-gray-600 md:grid-cols-2 md:gap-16">
+                    <div>
+                        <h5 class="mt-10 mb-3 font-semibold text-gray-900">¿Cuál es el ciclo de vida de los sistemas de
+                            información?</h5>
+                        <img src="assets/img/lab1/ciclo.jpg" alt="Ciclo de vida">
+                    </div>
+                    <div>
+                        <h5 class="mt-10 mb-3 font-semibold text-gray-900">¿Cuál es el ciclo de desarrollo de sistemas
+                            de información?</h5>
+                        <img src="assets/img/lab1/desarrollo.png" alt="Ciclo de desarrollo">
                     </div>
                 </div>
             </div>
