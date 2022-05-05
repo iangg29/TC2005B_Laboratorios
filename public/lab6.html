@@ -1,152 +1,285 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <title>Laboratorio 6</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body class="antialized">
-<div class="flex flex-col h-screen justify-between">
-    <header class="text-center p-10 space-y-20">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body class="antialized">
+    <div class="flex flex-col h-screen justify-between">
+      <header class="text-center p-10 space-y-20">
         <div>
-            <img src="assets/svg/tec.svg" alt="Tecnológico de Monterrey" class="mx-auto">
+          <img
+            src="assets/svg/tec.svg"
+            alt="Tecnológico de Monterrey"
+            class="mx-auto"
+          />
         </div>
         <div class="space-y-6">
-            <h1 class="text-3xl text-cyan-800 font-bold">Lab 6: Programación orientada a eventos</h1>
-            <p class="text-lg text-slate-500 hover:underline"><a href="index.html">Volver</a></p>
+          <h1 class="text-3xl text-cyan-800 font-bold">
+            Lab 6: Programación orientada a eventos
+          </h1>
+          <p class="text-lg text-slate-500 hover:underline">
+            <a href="index.html">Volver</a>
+          </p>
         </div>
-    </header>
-    <main class="mb-auto">
+      </header>
+      <main class="mb-auto">
         <!-- Laboratorio -->
         <section class="bg-white">
-            <div class="max-w-6xl mx-auto">
-                <div class="flex flex-col items-center md:flex-row px-5 lg:px-0">
-                    <div class="w-full space-y-5 md:w-3/5 md:pr-16">
-                        <p class="font-medium text-blue-500 uppercase">Parte 1</p>
-                        <h2 class="text-2xl font-extrabold leading-none text-black sm:text-3xl md:text-5xl">
-                            Valida tu contraseña
-                        </h2>
-                    </div>
-                    <div class="w-full mt-16 md:mt-0 md:w-2/5">
-                        <div class="relative z-10 h-auto p-8 py-10 overflow-hidden bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7">
-                            <h3 class="text-2xl font-medium text-center">Validación</h3>
-                            <div class="text-center my-5 font-semibold hidden" id="validator-notifier-container">
-                                <p class="font-semibold text-green-600 text-red-600" id="validator-notifier-txt"></p>
-                            </div>
-                            <div class="my-5">
-                                <input type="password" name="password1" id="password1" class="block w-full px-4 py-3 mb-4 border border-2 border-transparent border-gray-200 rounded-lg focus:ring focus:ring-cyan-500 focus:outline-none" placeholder="Contraseña">
-                                <input type="password" name="password2" id="password2" class="block w-full px-4 py-3 mb-4 border border-2 border-transparent border-gray-200 rounded-lg focus:ring focus:ring-cyan-500 focus:outline-none" placeholder="Confirmación">
-                            </div>
-                            <div class="block">
-                                <button class="w-full px-3 py-4 font-medium text-white bg-cyan-600 rounded-lg" id="validatePasswordsBtn">Validar</button>
-                            </div>
-                        </div>
-                    </div>
+          <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col items-center md:flex-row px-5 lg:px-0">
+              <div class="w-full space-y-5 md:w-3/5 md:pr-16">
+                <p class="font-medium text-blue-500 uppercase">Parte 1</p>
+                <h2
+                  class="text-2xl font-extrabold leading-none text-black sm:text-3xl md:text-5xl"
+                >
+                  Valida tu contraseña
+                </h2>
+              </div>
+              <div class="w-full mt-16 md:mt-0 md:w-2/5">
+                <div
+                  class="relative z-10 h-auto p-8 py-10 overflow-hidden bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7"
+                >
+                  <h3 class="text-2xl font-medium text-center">Validación</h3>
+                  <div
+                    class="text-center my-5 font-semibold hidden"
+                    id="validator-notifier-container"
+                  >
+                    <p
+                      class="font-semibold text-green-600 text-red-600"
+                      id="validator-notifier-txt"
+                    ></p>
+                  </div>
+                  <div class="my-5">
+                    <input
+                      type="password"
+                      name="password1"
+                      id="password1"
+                      class="block w-full px-4 py-3 mb-4 border border-2 border-transparent border-gray-200 rounded-lg focus:ring focus:ring-cyan-500 focus:outline-none"
+                      placeholder="Contraseña"
+                    />
+                    <input
+                      type="password"
+                      name="password2"
+                      id="password2"
+                      class="block w-full px-4 py-3 mb-4 border border-2 border-transparent border-gray-200 rounded-lg focus:ring focus:ring-cyan-500 focus:outline-none"
+                      placeholder="Confirmación"
+                    />
+                  </div>
+                  <div class="block">
+                    <button
+                      class="w-full px-3 py-4 font-medium text-white bg-cyan-600 rounded-lg"
+                      id="validatePasswordsBtn"
+                    >
+                      Validar
+                    </button>
+                  </div>
                 </div>
+              </div>
             </div>
-            <div class="relative w-full px-5 pt-10 mx-auto sm:pt-12 md:pt-14 md:px-0 max-w-6xl">
-                <p class="font-medium text-blue-500 uppercase">Parte 2</p>
-                <h1 class="mt-5 text-4xl font-extrabold leading-none text-gray-900 lg:text-5xl sm:mb-3">Tienda en línea</h1>
-                <div class="flex grid h-full grid-cols-12 gap-10 pb-10 mt-8 sm:mt-16">
-                    <div class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
-                        <a href="#" class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style="background-image:url('https://cdn.devdojo.com/images/may2021/quench-satisfying.jpg')">
-                        </a>
-                        <div class="relative z-20 w-full h-auto py-8 text-white bg-purple-500 border-t-0 border-purple-200 px-7">
-                            <a href="#" class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-purple-500 bg-white">Hogar</a>
-                            <h2 class="mb-5 text-5xl font-bold"><a href="#">Vaso</a></h2>
-                            <h3 class="mb-5 text-4xl font-semibold">$15.00</h3>
-                            <button class="py-2 px-10 rounded-lg bg-gray-50 text-gray-900">Agregar al carrito</button>
-                        </div>
-                    </div>
-
-                    <div class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
-                        <a href="#" class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style="background-image:url('https://cdn.devdojo.com/images/may2021/orange.jpg')">
-                        </a>
-                        <div class="relative z-20 w-full h-auto py-8 text-white bg-blue-400 border-t-0 border-blue-200 px-7">
-                            <a href="#" class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-blue-500 bg-white">Fruta</a>
-                            <h2 class="mb-5 text-5xl font-bold"><a href="#">Naranja</a></h2>
-                            <h3 class="mb-5 text-4xl font-semibold">$10.00</h3>
-                            <button class="py-2 px-10 rounded-lg bg-gray-50 text-gray-900">Agregar al carrito</button>
-                        </div>
-                    </div>
-
-                    <div class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group sm:col-span-12 xl:col-span-4 sm:flex-row xl:flex-col">
-                        <a href="#" class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style="background-image:url('https://cdn.devdojo.com/images/may2021/gbc.jpg')"></a>
-                        <div class="relative z-20 flex flex-col items-start justify-center w-full h-auto py-8 text-white bg-yellow-400 border-t-0 border-yellow-200 sm:h-full xl:h-auto px-7">
-                            <a href="#" class="inline-block text-xs font-semibold absolute sm:mb-5 xl:mb-0 sm:relative xl:absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-yellow-400 bg-white">Entretenimiento</a>
-                            <h2 class="mb-5 text-5xl font-bold"><a href="#">Consola</a></h2>
-                            <h3 class="mb-5 text-4xl font-semibold">$50.00</h3>
-                            <button class="py-2 px-10 rounded-lg bg-gray-50 text-gray-900 hover:bg-gray-100">Agregar al carrito</button>
-                        </div>
-                    </div>
+          </div>
+          <div
+            class="relative w-full px-5 pt-10 mx-auto sm:pt-12 md:pt-14 md:px-0 max-w-6xl"
+          >
+            <p class="font-medium text-blue-500 uppercase">Parte 2</p>
+            <h1
+              class="mt-5 text-4xl font-extrabold leading-none text-gray-900 lg:text-5xl sm:mb-3"
+            >
+              Tienda en línea
+            </h1>
+            <div
+              class="flex grid h-full grid-cols-12 gap-10 pb-10 mt-8 sm:mt-16"
+            >
+              <div
+                class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4"
+              >
+                <a
+                  href="#"
+                  class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110"
+                  style="
+                    background-image: url('https://cdn.devdojo.com/images/may2021/quench-satisfying.jpg');
+                  "
+                >
+                </a>
+                <div
+                  class="relative z-20 w-full h-auto py-8 text-white bg-purple-500 border-t-0 border-purple-200 px-7"
+                >
+                  <a
+                    href="#"
+                    class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-purple-500 bg-white"
+                    >Hogar</a
+                  >
+                  <h2 class="mb-5 text-5xl font-bold"><a href="#">Vaso</a></h2>
+                  <h3 class="mb-5 text-4xl font-semibold">$15.00</h3>
+                  <button
+                    class="py-2 px-10 rounded-lg bg-gray-50 text-gray-900"
+                  >
+                    Agregar al carrito
+                  </button>
                 </div>
-                <div class="flex flex-col mt-5">
-                    <h2 class="font-bold text-3xl">Mi carrito</h2>
-                    <div class="mt-10 hidden" id="emptyCart">
-                        <p class="text-base text-gray-700">!! Tu carrito está vacío.</p>
-                    </div>
-                    <div class="mt-10 space-y-10">
-                        <div class="flex flex-col">
-                            <h3 class="font-semibold text-2xl">Contenido</h3>
-                            <div class="flex flex-col my-10">
-                                <div class="flex flex-row justify-between font-light text-gray-700">
-                                    <p>Cantidad</p>
-                                    <p>Concepto</p>
-                                    <p>Acción</p>
-                                </div>
-                            </div>
-                            <div class="flex flex-col" id="cartContent">
-                                <div class="flex flex-row justify-between">
-                                    <p>1</p>
-                                    <p>Vaso</p>
-                                    <button class="px-5 py-1 rounded-lg bg-red-700 text-gray-50 text-xs">Eliminar</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-row justify-between">
-                            <h3 class="font-semibold">Total</h3>
-                            <p>$<span id="cartTotal">0</span> MXN</p>
-                        </div>
-                    </div>
-                    <div class="mt-10 text-right">
-                        <button class="px-10 py-2 bg-cyan-600 rounded text-gray-50">Comprar</button>
-                    </div>
+              </div>
+
+              <div
+                class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4"
+              >
+                <a
+                  href="#"
+                  class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110"
+                  style="
+                    background-image: url('https://cdn.devdojo.com/images/may2021/orange.jpg');
+                  "
+                >
+                </a>
+                <div
+                  class="relative z-20 w-full h-auto py-8 text-white bg-blue-400 border-t-0 border-blue-200 px-7"
+                >
+                  <a
+                    href="#"
+                    class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-blue-500 bg-white"
+                    >Fruta</a
+                  >
+                  <h2 class="mb-5 text-5xl font-bold">
+                    <a href="#">Naranja</a>
+                  </h2>
+                  <h3 class="mb-5 text-4xl font-semibold">$10.00</h3>
+                  <button
+                    class="py-2 px-10 rounded-lg bg-gray-50 text-gray-900"
+                  >
+                    Agregar al carrito
+                  </button>
                 </div>
+              </div>
+
+              <div
+                class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group sm:col-span-12 xl:col-span-4 sm:flex-row xl:flex-col"
+              >
+                <a
+                  href="#"
+                  class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110"
+                  style="
+                    background-image: url('https://cdn.devdojo.com/images/may2021/gbc.jpg');
+                  "
+                ></a>
+                <div
+                  class="relative z-20 flex flex-col items-start justify-center w-full h-auto py-8 text-white bg-yellow-400 border-t-0 border-yellow-200 sm:h-full xl:h-auto px-7"
+                >
+                  <a
+                    href="#"
+                    class="inline-block text-xs font-semibold absolute sm:mb-5 xl:mb-0 sm:relative xl:absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-yellow-400 bg-white"
+                    >Entretenimiento</a
+                  >
+                  <h2 class="mb-5 text-5xl font-bold">
+                    <a href="#">Consola</a>
+                  </h2>
+                  <h3 class="mb-5 text-4xl font-semibold">$50.00</h3>
+                  <button
+                    class="py-2 px-10 rounded-lg bg-gray-50 text-gray-900 hover:bg-gray-100"
+                  >
+                    Agregar al carrito
+                  </button>
+                </div>
+              </div>
             </div>
+            <div class="flex flex-col mt-5">
+              <h2 class="font-bold text-3xl">Mi carrito</h2>
+              <div class="mt-10 hidden" id="emptyCart">
+                <p class="text-base text-gray-700">!! Tu carrito está vacío.</p>
+              </div>
+              <div class="mt-10 space-y-10">
+                <div class="flex flex-col">
+                  <h3 class="font-semibold text-2xl">Contenido</h3>
+                  <div class="flex flex-col my-10">
+                    <div
+                      class="flex flex-row justify-between font-light text-gray-700"
+                    >
+                      <p>Cantidad</p>
+                      <p>Concepto</p>
+                      <p>Acción</p>
+                    </div>
+                  </div>
+                  <div class="flex flex-col" id="cartContent">
+                    <div class="flex flex-row justify-between">
+                      <p>1</p>
+                      <p>Vaso</p>
+                      <button
+                        class="px-5 py-1 rounded-lg bg-red-700 text-gray-50 text-xs"
+                      >
+                        Eliminar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-row justify-between">
+                  <h3 class="font-semibold">Total</h3>
+                  <p>$<span id="cartTotal">0</span> MXN</p>
+                </div>
+              </div>
+              <div class="mt-10 text-right">
+                <button class="px-10 py-2 bg-cyan-600 rounded text-gray-50">
+                  Comprar
+                </button>
+              </div>
+            </div>
+          </div>
         </section>
         <!-- Preguntas -->
         <section class="py-6 bg-white">
-            <div class="px-8 mx-auto max-w-7xl lg:px-16">
-                <h2 class="mb-4 text-xl font-bold md:text-3xl">Preguntas</h2>
-                <div class="grid grid-cols-1 lg:grid grid-cols-2 gap-0 text-gray-600 md:grid-cols-2 md:gap-16 text-justify">
-                    <div>
-                        <h5 class="mt-10 mb-3 font-semibold text-gray-900">¿Por qué es una buena práctica usar
-                            JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos
-                            al servidor?</h5>
-                        <p>Es una buena práctica ya que se pueden desplegar errores o ayudas al usuario para que pueda
-                            llenar los inputs de una manera correcta.</p>
-                        <h5 class="mt-10 mb-3 font-semibold text-gray-900">¿Cómo puedes saltarte la seguridad de
-                            validaciones hechas con JavaScript?</h5>
-                        <p>Existen diferentes formas, por ejemplo apagar los scripts dentro del navegador, inyectar
-                            nuevo código, así como poder hacer <i>overwrite</i> del mismo para saltar validaciones.</p>
-                    </div>
-                    <div>
-                        <h5 class="mt-10 mb-3 font-semibold text-gray-900">Si te puedes saltar la seguridad de las
-                            validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena
-                            práctica?</h5>
-                        <p>Es una buena práctica, ya que normalmente las validaciones se realizan en ambos lados de la
-                            aplicación (<i>frontend</i> y <i>backend</i>), por lo que las validaciones con JavaScript
-                            son importantes para la retroalimentación al usuario y no tanto de seguridad.</p>
-                    </div>
-                </div>
+          <div class="px-8 mx-auto max-w-7xl lg:px-16">
+            <h2 class="mb-4 text-xl font-bold md:text-3xl">Preguntas</h2>
+            <div
+              class="grid grid-cols-1 lg:grid grid-cols-2 gap-0 text-gray-600 md:grid-cols-2 md:gap-16 text-justify"
+            >
+              <div>
+                <h5 class="mt-10 mb-3 font-semibold text-gray-900">
+                  ¿Por qué es una buena práctica usar JavaScript para checar que
+                  sean válidos los inputs de las formas antes de enviar los
+                  datos al servidor?
+                </h5>
+                <p>
+                  Es una buena práctica ya que se pueden desplegar errores o
+                  ayudas al usuario para que pueda llenar los inputs de una
+                  manera correcta.
+                </p>
+                <h5 class="mt-10 mb-3 font-semibold text-gray-900">
+                  ¿Cómo puedes saltarte la seguridad de validaciones hechas con
+                  JavaScript?
+                </h5>
+                <p>
+                  Existen diferentes formas, por ejemplo apagar los scripts
+                  dentro del navegador, inyectar nuevo código, así como poder
+                  hacer <i>overwrite</i> del mismo para saltar validaciones.
+                </p>
+              </div>
+              <div>
+                <h5 class="mt-10 mb-3 font-semibold text-gray-900">
+                  Si te puedes saltar la seguridad de las validaciones de
+                  JavaScript, entonces ¿por qué la primera pregunta dice que es
+                  una buena práctica?
+                </h5>
+                <p>
+                  Es una buena práctica, ya que normalmente las validaciones se
+                  realizan en ambos lados de la aplicación (<i>frontend</i> y
+                  <i>backend</i>), por lo que las validaciones con JavaScript
+                  son importantes para la retroalimentación al usuario y no
+                  tanto de seguridad.
+                </p>
+              </div>
             </div>
+          </div>
         </section>
-    </main>
-    <footer class="text-center p-10">
-        <p>Ian García &copy; 2022 | <a href="http://github.com/iangg29/TC2005B_Laboratorios" target="_blank">Github</a>
+      </main>
+      <footer class="text-center p-10">
+        <p>
+          Ian García &copy; 2022 |
+          <a
+            href="http://github.com/iangg29/TC2005B_Laboratorios"
+            target="_blank"
+            >Github</a
+          >
         </p>
-    </footer>
-</div>
-<script src="/js/lab6.js"></script>
-</body>
+      </footer>
+    </div>
+    <script src="/js/lab6.js"></script>
+  </body>
 </html>

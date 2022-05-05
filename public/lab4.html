@@ -1,99 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <title>Laboratorio 4</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body class="antialized">
-<div class="flex flex-col h-screen justify-between">
-    <header class="text-center p-10 space-y-20">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body class="antialized">
+    <div class="flex flex-col h-screen justify-between">
+      <header class="text-center p-10 space-y-20">
         <div>
-            <img src="assets/svg/tec.svg" alt="Tecnológico de Monterrey" class="mx-auto">
+          <img
+            src="assets/svg/tec.svg"
+            alt="Tecnológico de Monterrey"
+            class="mx-auto"
+          />
         </div>
         <div class="space-y-6">
-            <h1 class="text-3xl text-cyan-800 font-bold">Laboratorio 4: Fundamentos de JavaScript</h1>
-            <p class="text-lg text-slate-500 hover:underline"><a href="index.html">Volver</a></p>
+          <h1 class="text-3xl text-cyan-800 font-bold">
+            Laboratorio 4: Fundamentos de JavaScript
+          </h1>
+          <p class="text-lg text-slate-500 hover:underline">
+            <a href="index.html">Volver</a>
+          </p>
         </div>
-    </header>
-    <main class="mb-auto">
+      </header>
+      <main class="mb-auto">
         <!-- Laboratorio -->
         <section class="container mx-auto text-center">
-            <button id="startScriptBtn" class="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2 rounded shadow-md">
-                Iniciar script
-            </button>
+          <button
+            id="startScriptBtn"
+            class="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2 rounded shadow-md"
+          >
+            Iniciar script
+          </button>
         </section>
         <section class="container mx-auto py-12 hidden" id="exercise1">
-            <div>
-                <h2>Ejercicio 1.</h2>
-            </div>
-            <div class="flex flex-col">
-                <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                    <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-                        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                            <table class="min-w-full divide-y divide-gray-200 text-center" id="ex1Table">
-                                <thead class="bg-gray-50">
-                                <tr>
-                                    <th scope="col"
-                                        class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Número
-                                    </th>
-                                    <th scope="col"
-                                        class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Cuadrado
-                                    </th>
-                                    <th scope="col"
-                                        class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Cubo
-                                    </th>
-                                </tr>
-                                </thead>
-                                <tbody class="bg-white divide-y divide-gray-200" id="ex1TableBody">
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+          <div>
+            <h2>Ejercicio 1.</h2>
+          </div>
+          <div class="flex flex-col">
+            <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+              <div
+                class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8"
+              >
+                <div
+                  class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg"
+                >
+                  <table
+                    class="min-w-full divide-y divide-gray-200 text-center"
+                    id="ex1Table"
+                  >
+                    <thead class="bg-gray-50">
+                      <tr>
+                        <th
+                          scope="col"
+                          class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider"
+                        >
+                          Número
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider"
+                        >
+                          Cuadrado
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider"
+                        >
+                          Cubo
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody
+                      class="bg-white divide-y divide-gray-200"
+                      id="ex1TableBody"
+                    ></tbody>
+                  </table>
                 </div>
+              </div>
             </div>
+          </div>
         </section>
         <!-- Preguntas -->
         <section class="py-6 bg-white">
-            <div class="px-8 mx-auto max-w-7xl lg:px-16 text-justify">
-                <h2 class="mb-4 text-xl font-bold md:text-3xl">Preguntas</h2>
-                <div class="grid grid-cols-1 gap-0 text-gray-600 md:grid-cols-2 md:gap-16">
-                    <div>
-                        <h5 class="mt-10 mb-3 font-semibold text-gray-900">¿Qué diferencias y semejanzas hay entre Java
-                            y JavaScript?</h5>
-                        <p>Las principales diferencias son su sintaxis, ensamblado y ejecución. Java es usado
-                            principalmente en aplicaciones móviles (Android), sistemas de escritorio, entre otras.
-                            Mientras que JavaScript es usado en aplicaciones web, así como en desarrollo de aplicaciones
-                            móviles nativas (React Native). Java necesita ser compilado, mientras que JavaScript no.</p>
-                        <h5 class="mt-10 mb-3 font-semibold text-gray-900">¿Qué métodos tiene el objeto Date? (Menciona
-                            al menos 5*)</h5>
-                        <p>getFullYear(), getDay(), getTimezoneOffset(), getMonth(), toString().</p>
-                        <h5 class="mt-10 mb-3 font-semibold text-gray-900">¿Qué métodos tienen los arreglos? (Menciona
-                            al menos 5*)</h5>
-                        <p>.map(), .filter(), .push(), .forEach(), .indexOf().</p>
-                    </div>
-                    <div>
-                        <h5 class="mt-10 mb-3 font-semibold text-gray-900">¿Cómo se declara una variable con alcance
-                            local dentro de una función?</h5>
-                        <p>Para declarar una variable se debe utilizar la palabra reservada <i>let</i> o <i>const</i>,
-                            de acuerdo al uso que se le dará a la variable dentro del <i>scope</i> {} de la función.</p>
-                        <h5 class="mt-10 mb-3 font-semibold text-gray-900">¿Qué implicaciones tiene utilizar variables
-                            globales dentro de funciones?</h5>
-                        <p>Puede implicar perder el control de dichas variables, ya que si no son declaradas como
-                            constantes, estas pueden variar y verse afectadas por distintas funciones.</p>
-                    </div>
-                </div>
+          <div class="px-8 mx-auto max-w-7xl lg:px-16 text-justify">
+            <h2 class="mb-4 text-xl font-bold md:text-3xl">Preguntas</h2>
+            <div
+              class="grid grid-cols-1 gap-0 text-gray-600 md:grid-cols-2 md:gap-16"
+            >
+              <div>
+                <h5 class="mt-10 mb-3 font-semibold text-gray-900">
+                  ¿Qué diferencias y semejanzas hay entre Java y JavaScript?
+                </h5>
+                <p>
+                  Las principales diferencias son su sintaxis, ensamblado y
+                  ejecución. Java es usado principalmente en aplicaciones
+                  móviles (Android), sistemas de escritorio, entre otras.
+                  Mientras que JavaScript es usado en aplicaciones web, así como
+                  en desarrollo de aplicaciones móviles nativas (React Native).
+                  Java necesita ser compilado, mientras que JavaScript no.
+                </p>
+                <h5 class="mt-10 mb-3 font-semibold text-gray-900">
+                  ¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)
+                </h5>
+                <p>
+                  getFullYear(), getDay(), getTimezoneOffset(), getMonth(),
+                  toString().
+                </p>
+                <h5 class="mt-10 mb-3 font-semibold text-gray-900">
+                  ¿Qué métodos tienen los arreglos? (Menciona al menos 5*)
+                </h5>
+                <p>.map(), .filter(), .push(), .forEach(), .indexOf().</p>
+              </div>
+              <div>
+                <h5 class="mt-10 mb-3 font-semibold text-gray-900">
+                  ¿Cómo se declara una variable con alcance local dentro de una
+                  función?
+                </h5>
+                <p>
+                  Para declarar una variable se debe utilizar la palabra
+                  reservada <i>let</i> o <i>const</i>, de acuerdo al uso que se
+                  le dará a la variable dentro del <i>scope</i> {} de la
+                  función.
+                </p>
+                <h5 class="mt-10 mb-3 font-semibold text-gray-900">
+                  ¿Qué implicaciones tiene utilizar variables globales dentro de
+                  funciones?
+                </h5>
+                <p>
+                  Puede implicar perder el control de dichas variables, ya que
+                  si no son declaradas como constantes, estas pueden variar y
+                  verse afectadas por distintas funciones.
+                </p>
+              </div>
             </div>
+          </div>
         </section>
-    </main>
-    <footer class="text-center p-10">
-        <p>Ian García &copy; 2022 | <a href="http://github.com/iangg29/TC2005B_Laboratorios" target="_blank">Github</a>
+      </main>
+      <footer class="text-center p-10">
+        <p>
+          Ian García &copy; 2022 |
+          <a
+            href="http://github.com/iangg29/TC2005B_Laboratorios"
+            target="_blank"
+            >Github</a
+          >
         </p>
-    </footer>
-</div>
-<script src="/js/lab4.js"></script>
-</body>
+      </footer>
+    </div>
+    <script src="/js/lab4.js"></script>
+  </body>
 </html>
