@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratorio 12</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="antialized">
+    <div class="container mx-auto text-center p-10">
+      <h1 class="text-4xl font-bold mb-10">
+        Bienvenido al laboratorio 12 de <%= name %>
+      </h1>
+      <section class="py-6 bg-white">
+        <div class="px-8 mx-auto max-w-7xl lg:px-16">
+          <h2 class="mb-4 text-xl font-bold md:text-3xl">Preguntas</h2>
+          <div
+            class="grid grid-cols-1 gap-0 text-gray-600 md:grid-cols-2 md:gap-16 text-justify"
+          >
+            <div>
+              <h5 class="mt-10 mb-3 font-semibold text-gray-900">
+                ¿Qué otros templating engines existen para node?
+              </h5>
+              <p>
+                Algunos de los templating engines que existen para node son:
+              </p>
+              <ul class="list-disc mt-5">
+                <li>Jade</li>
+                <li>Vash</li>
+                <li>EJS</li>
+                <li>Mustache</li>
+                <li>Dust.js</li>
+                <li>Nunjucks</li>
+                <li>Pug</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
